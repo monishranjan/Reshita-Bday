@@ -23,7 +23,7 @@ const Greeting = () => {
         animate={{ scale: 1 }}
         transition={{ delay: 0.5, type: 'spring', stiffness: 100 }}
         style={{
-          fontSize: '3.5rem',
+          fontSize: 'clamp(2.5rem, 8vw, 3.5rem)',
           marginBottom: '1rem',
           lineHeight: '1.2'
         }}

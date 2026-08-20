@@ -55,7 +55,7 @@ const GiftBox = () => {
               padding: '2rem'
             }}
           >
-            <motion.h2 
+            <motion.h2
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -69,13 +69,13 @@ const GiftBox = () => {
               transition={{ delay: 0.5 }}
               style={{ fontSize: '1.1rem', lineHeight: '1.6' }}
             >
-              I actually planned to be there on the 20th and give you a huge surprise that I was in Kolkata for your birthday. 
+              I actually planned to be there on the 20th and give you a huge surprise that I was in Kolkata for your birthday.
               <br /><br />
               But unfortunately, I got caught up in some unexpected issues at home and just couldn't make it. I miss you so much on your special day.
               <br /><br />
-              Don't worry though! Your gift order has been placed and it will reach you by the <strong>28th</strong>. 
+              Don't worry though! Your gift order has been placed and it will reach you by the <strong>28th</strong>.
               <br /><br />
-              I love you, and I hope this small virtual surprise brings a smile to your face today. ❤️
+              I love you, and I hope this small virtual surprise brings a smile to your face for the time being. I'll make sure to soon see actual smile in-person on your face. ❤️
             </motion.p>
           </motion.div>
         )}

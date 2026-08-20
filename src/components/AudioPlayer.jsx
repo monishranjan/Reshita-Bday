@@ -5,6 +5,18 @@ const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play()
+        .then(() => {
+          setIsPlaying(true);
+        })
+        .catch(err => {
+          console.log("Autoplay blocked:", err);
+        });
+    }
+  }, []);
+
   const togglePlay = () => {
     if (isPlaying) {
       audioRef.current.pause();
@@ -54,7 +66,7 @@ const AudioPlayer = () => {
         {isPlaying ? <Pause size={18} /> : <Play size={18} style={{ marginLeft: '2px' }}/>}
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', color: 'var(--text-color)' }}>
-        <span style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>Our Playlist</span>
+        <span style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>Song Suggestion</span>
         <span style={{ fontSize: '0.65rem', opacity: 0.8, display: 'flex', alignItems: 'center', gap: '4px' }}>
           <Music size={10} /> {isPlaying ? 'Playing...' : 'Tap to Play'}
         </span>
